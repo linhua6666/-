@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Sep 29 14:54:37 2021
-
 """
 import smtplib
 from email.mime.text import MIMEText
@@ -9,8 +8,8 @@ msg_from="2661351252@qq.com"
 passwd="oueupeaiyqbtebea"
 msg_to="57820048@qq.com"
 
-subject = "2019144124 Ğ»ÁÖèë"
-content = "±¾»úµÄË½ÍøIPµØÖ·£º10.169.236.71£»¹«ÍøIPµØÖ·£º172.68.133.82£»Á¬ÉÏĞ£Ô°Íø·ÖÅä¸ø±¾»úµÄË½ÍøIPµØÖ·£º10.128.66.194£»¹«ÍøIPµØÖ·£º39.129.40.49"
+subject = "2019144124 è°¢æ—æ¡¦"
+content = "æœ¬æœºçš„ç§ç½‘IPåœ°å€ï¼š10.169.236.71ï¼›å…¬ç½‘IPåœ°å€ï¼š172.68.133.82ï¼›è¿ä¸Šæ ¡å›­ç½‘åˆ†é…ç»™æœ¬æœºçš„ç§ç½‘IPåœ°å€ï¼š10.128.66.194ï¼›å…¬ç½‘IPåœ°å€ï¼š39.129.40.49"
 msg = MIMEText(content)
 msg['Subject'] = subject
 msg['From']= msg_from
@@ -19,8 +18,8 @@ try:
     s = smtplib.SMTP_SSL("smtp.qq.com",465)
     s.login(msg_from,passwd)
     s.sendmail(msg_from,msg_to,msg.as_string())
-    print("·¢ËÍ³É¹¦")
+    print("å‘é€æˆåŠŸ")
 except Exception as e:
-    print("·¢ËÍÊ§°Ü",e)
+    print("å‘é€å¤±è´¥",e)
 finally:
     s.quit()
